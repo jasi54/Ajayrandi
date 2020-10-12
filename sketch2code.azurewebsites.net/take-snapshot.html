@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from sketch2code.azurewebsites.net/take-snapshot by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Oct 2020 07:31:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta property="og:url" content="index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Transform sketches into HTML using AI" />
+    <meta property="og:description" content="Take a handwritten UI design and transform it into a valid HTML code" />
+    <meta property="og:image" content="content/img/img_spareMobile.svg" />
+    <meta name="description" content="Transform sketches into HTML using AI">
+    <link rel="icon"
+          type="image/x-icon"
+          href="content/img/favicon.ico">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch2Code - Transform sketches into HTML using AI</title>
+    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../cdn.jsdelivr.net/npm/es6-promise%404/dist/es6-promise.auto.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <link href="Content/main.css" rel="stylesheet" type="text/css" />
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="../cdnjs.cloudflare.com/ajax/libs/cropperjs/1.4.0/cropper.min.css" rel="stylesheet" type="text/css" />
+    <script src="../cdnjs.cloudflare.com/ajax/libs/cropperjs/1.4.0/cropper.min.js"></script>
+    <script type='text/javascript'>
+        var appInsights = window.appInsights || function (config) {
+            function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
+            var t = { config: config }, u = document, e = window, o = 'script', s = u.createElement(o), i, f; for (s.src = config.url || '//az416426.vo.msecnd.net/scripts/a/ai.0.js', u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Ajax']; i.length;)r('track' + i.pop()); return r('setAuthenticatedUserContext'), r('clearAuthenticatedUserContext'), config.disableExceptionTracking || (i = 'onerror', r('_' + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o), s }), t
+        }({
+            instrumentationKey: '0bf8d80a-82a1-4966-947c-9d7b15bf42d8'
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
+
+</head>
+<body>
+
+    <div id="disclaimer" class="disclaimer text-white hide" aria-hidden="true">
+        This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to this use.
+        <a class="learn-more" href="https://privacy.microsoft.com/en-US/">Learn more</a>
+        <button class="close" id="cookie-consent" aria-label="Close">X</button>
+    </div>
+
+    <div id="header" class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <a href="https://www.microsoft.com/en-us/">
+                    <img alt="Microsoft Logo" src="content/img/ms_logo.png" />
+                </a>
+
+                <span class="hidden-responsive">&nbsp;|</span>
+                <a href="https://www.microsoft.com/en-us/ai/default.aspx" class="hidden-responsive">
+                    <img alt="Microsoft AI Logo" src="content/img/ms_ai_logo.jpg" />
+                </a>
+
+            </div>
+
+            <div class="col text-right">
+                <a target="_blank" href="https://www.ailab.microsoft.com/experiments/30c61484-d081-4072-99d6-e132d362b99d">
+                    Learn more at AI Lab
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid hidden-responsive">
+        <div id="steps" class="row justify-content-center">
+            <div class="col">
+                <span id="step1" class="dot active">1</span>
+                <span id="step1txt" class="header-txt active">UPLOAD DESIGN</span>
+            </div>
+
+            <div class="col">
+                <span id="step2" class="dot">2</span>
+                <span id="step2txt" class="header-txt">SKETCH2CODE IS AT WORK!</span>
+            </div>
+
+            <div class="col">
+
+                <span id="step3" class="dot">3</span>
+
+                <span id="step3txt" class="header-txt">DOWNLOAD YOUR HTML</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="title">
+            <h1>
+                <span class="main">Sketch</span>
+                <span class="number">2</span>
+                <span class="main">Code</span>
+            </h1>
+
+            <h2 class="subtitle">Transform any hands-drawn design into a HTML code with AI.</h2>
+            
+    <h3 class="subtitle2 text-white">Take a picture from your camera</h3>
+
+        </div>
+
+        
+<div class="row">
+    <div class="col">
+
+        <form method="post" action="https://sketch2code.azurewebsites.net/Step2FromSnapshot" id="capture-uploader-form">
+            <div class="row">
+                <div class="col">
+                    <div class="container video-controls">
+                        <div class="row" id="camera-view" style="display:none">
+                            <div class="col">
+                                <div class="justify-content-center">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <video class="embed-responsive-item videostream" id="basic-stream" autoplay=""></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2" id="screenshot-view" style="display:none">
+                            <div class="col">
+                                <div class="justify-content-center">
+                                    <img alt="Taken picture" id="screenshot-placeholder">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2 text-center command-buttons" id="screenshot-button-region" style="display:none">
+                            <div class="col">
+                                <a href="#" id="screenshot-button"><img alt="Screenshot" src="content/img/button_screenshot.svg" style="width:300px; margin-top:2em; margin-bottom:2em;" /></a>
+                            </div>
+                        </div>
+                        <div class="row command-buttons mt-2" id="screenshot-crop-button-region" style="display:none">
+                            <div class="col">
+                                <div class="float-left"><a href="#" id="crop-button"><img alt="Crop and upload" src="content/img/button_crop.svg" style="width:300px; margin-top:2em" /></a></div>
+                                <div class="float-right"><a href="#" id="restart-button"><img alt="Restart" src="content/img/button_restart.svg" style="width:300px; margin-top:2em" /></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <input type="hidden" name="imageData" id="imageData" />
+        </form>
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div class="content-footer2">
+        <div class="container-fluid">
+
+            <div class="row hidden-responsive">
+
+                <div class="col">
+                    <img alt="Logo web" class="img-fluid float-right center-logo-right" src="content/img/img_spareMobile.svg">
+                </div>
+            </div>
+
+
+        </div>
+        <div id="footer" class="p-3 p-md-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text-center text-white pb-4">
+                        Your picture may be used to improve the underlying AI.
+                    </div>
+                </div>
+                <div class="row footer-links2">
+                    <div class="col">
+                        <a href="https://www.microsoft.com/en-us/">
+                            <img alt="Microsoft Logo" src="content/img/logo_MS.png">
+                        </a>
+                    </div>
+                    <div class="col"><a target="_blank" href="https://www.ailab.microsoft.com/">AI Lab</a></div>
+                    <div class="col"><a target="_blank" href="https://support.microsoft.com/en-us/contactus">Contact Us</a></div>
+                    <div class="col"><a target="_blank" href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy &amp; Cookies</a></div>
+                    <div class="col"><a target="_blank" href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a></div>
+                    <div class="col"><a target="_blank" href="https://www.microsoft.com/trademarks">Trademarks</a></div>
+                </div>
+            </div>
+            <div class="text-center text-white pt-5">
+                © Microsoft 2018
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            const video = document.querySelector('#basic-stream');
+
+            const button_region = document.querySelector('#capture-button-region');
+            const screenshotButton_region = document.querySelector('#screenshot-button-region');
+            const cropButton_region = document.querySelector('#screenshot-crop-button-region');
+            const screenshotButton = document.querySelector('#screenshot-button');
+            const cropButton = document.querySelector('#crop-button');
+            const restartButton = document.querySelector('#restart-button');
+            const img = document.querySelector('#screenshot-placeholder');
+            const screenshot = document.querySelector('#imageData');
+            const theForm = document.querySelector('#capture-uploader-form');
+            const videoContainer = document.querySelector('#camera-view');
+            const screenshotContainer = document.querySelector('#screenshot-view');
+
+            var cropper = null;
+            var localMediaStream = null;
+            const constraints = { video: true };
+
+            function handleError(error) { console.error('navigator.getUserMedia error: ', error); }
+
+            function handleSuccess(stream) {
+                screenshotMode();
+                window.stream = stream; // only to make stream available to console
+                video.srcObject = stream;
+                return false;
+            }
+
+            cropButton.onclick = function () {
+
+                cropper.crop();
+                var imgSource = cropper.getCroppedCanvas().toDataURL("image/png");
+                var imageSegments = imgSource.split(",");
+                screenshot.value = imageSegments.pop();
+                cropper.destroy();
+                img.src = imgSource;
+                cropMode();
+                theForm.submit();
+                return false;
+            }
+
+            screenshotButton.onclick = video.onclick = function () {
+                cropMode();
+                const canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                canvas.getContext('2d').drawImage(video, 0, 0);
+                img.src = canvas.toDataURL('image/png');
+                cropper = new Cropper(img, { viewMode: 2 });
+                return false;
+            };
+
+            restartButton.onclick = function () {
+                cropper.destroy();
+                restartMode();
+                return false;
+            }
+
+            var screenshotMode = function () {
+                show(videoContainer);
+                show(screenshotButton_region);
+                hide(button_region);
+                hide(cropButton_region);
+                hide(screenshotContainer);
+                toogleFooter();
+            }
+            var cropMode = function () {
+                hide(videoContainer);
+                hide(screenshotButton_region);
+                show(cropButton_region);
+                show(screenshotContainer);
+                toogleFooter();
+            }
+            var restartMode = function () {
+                return screenshotMode();
+            }
+
+            var hide = function (element) {
+                if (element)
+                    element.style.display = 'none';
+            };
+
+            var show = function (element) {
+                if (element && element.style.display == 'none')
+                    element.style.display = '';
+            }
+
+            var toogleFooter = function () {
+                $("div.fixed-bottom").removeClass("fixed-bottom");
+            }
+
+            navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
+
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        var consent = function () {
+            return (document.cookie.indexOf("Sketchconsent") != -1);
+        }
+
+        $(document).ready(function () {
+            var setConsentCookie = function () {
+                var d = new Date();
+                d.setTime(d.getTime() + (99999 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = "Sketchconsent=1;" + expires + ";path=/";
+                $("#disclaimer").hide();
+            };
+
+            if (!consent()) {
+                $("#disclaimer").show();
+                $("#cookie-consent").click(function () {
+                    setConsentCookie();
+                });
+                $("a").click(function () {
+                    setConsentCookie();
+                });
+            }
+        });
+
+    </script>
+
+    <!--Adobe analytics-->
+    <script src="../az725175.vo.msecnd.net/scripts/jsll-4.js" type="text/javascript">
+    </script>
+    <script>
+        const config = {
+            syncMuid: awa.utils.isValueAssigned(window.awa.cookie.getCookie('Sketchconsent')),
+            userConsentCookieName: 'Sketchconsent',
+            autoCapture: {
+                lineage: true,
+                scroll: true
+            },
+            coreData: {
+                appId: 'Sketch2Code',
+                env: 'prod',
+                market: 'en-us',
+                pageName: 'Sketch2Code',
+                pageType: 'html'
+            },
+            useShortNameForContentBlob: true
+        };
+
+        if (consent())
+            awa.init(config);
+
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121469252-4"></script>
+    <script>
+        if (consent()) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-121469252-4');
+        }
+
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        if (consent()) {
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                '../connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '435868603227390');
+            fbq('track', 'PageView');
+        }
+
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=435868603227390&amp;ev=PageView&amp;noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Twitter universal website tag code -->
+    <script>
+        if (consent()) {
+            !function (e, t, n, s, u, a) {
+                e.twq || (s = e.twq = function () {
+                    s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+                }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '../static.ads-twitter.com/uwt.js',
+                    a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+            }(window, document, 'script');
+            // Insert Twitter Pixel ID and Standard Event data below
+            twq('init', 'nv9r3');
+            twq('track', 'PageView');
+        }
+
+    </script>
+    <!-- End Twitter universal website tag code -->
+    <!-- Twitter universal website tag code -->
+    <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?p_id=Twitter&amp;p_user_id=0&amp;txn_id=nv9r3&amp;events=%5B%5B%22pageview%22%2Cnull%5D%5D&amp;tw_sale_amount=0&amp;tw_order_quantity=0" />
+    <img height="1" width="1" style="display:none;" alt="" src="http://t.co/i/adsct?p_id=Twitter&amp;p_user_id=0&amp;txn_id=nv9r3&amp;events=%5B%5B%22pageview%22%2Cnull%5D%5D&amp;tw_sale_amount=0&amp;tw_order_quantity=0" />
+    <!-- End Twitter universal website tag code -->
+    <!-- LinkedIn-->
+    <script type="text/javascript">
+        _linkedin_data_partner_id = "7850";
+    </script>
+    <script type="text/javascript">
+        if (consent()) {
+            (function () {
+                var s = document.getElementsByTagName("script")[0];
+                var b = document.createElement("script");
+                b.type = "text/javascript"; b.async = true;
+                b.src = "../snap.licdn.com/li.lms-analytics/insight.min.js";
+                s.parentNode.insertBefore(b, s);
+            })();
+        }
+    </script>
+
+
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=7850&amp;fmt=gif" />
+    </noscript>
+
+</body>
+
+<!-- Mirrored from sketch2code.azurewebsites.net/take-snapshot by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Oct 2020 07:31:12 GMT -->
+</html>
